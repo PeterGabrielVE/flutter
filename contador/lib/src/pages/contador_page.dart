@@ -34,9 +34,10 @@ class _ContadorPageState extends State<ContadorPage> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
         SizedBox(width: 30.0),
-        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: null),
+        FloatingActionButton(
+            child: Icon(Icons.exposure_zero), onPressed: _reset),
         Expanded(child: SizedBox(width: 5.0)),
-        FloatingActionButton(child: Icon(Icons.remove), onPressed: null),
+        FloatingActionButton(child: Icon(Icons.remove), onPressed: _sustraer),
         SizedBox(width: 5.0),
         FloatingActionButton(child: Icon(Icons.add), onPressed: _agregar),
       ],
@@ -45,5 +46,13 @@ class _ContadorPageState extends State<ContadorPage> {
 
   void _agregar() {
     setState(() => _conteo++);
+  }
+
+  void _sustraer() {
+    setState(() => _conteo--);
+  }
+
+  void _reset() {
+    setState(() => _conteo = 0);
   }
 }
