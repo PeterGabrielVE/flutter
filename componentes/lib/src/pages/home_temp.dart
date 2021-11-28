@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+// ignore: use_key_in_widget_constructors
 class HomePageTemp extends StatelessWidget {
   final opciones = ['Uno', 'Dos', 'Tres', 'Cuatro', 'Cinco'];
 
@@ -17,6 +18,7 @@ class HomePageTemp extends StatelessWidget {
     );
   }
 
+  // ignore: unused_element
   List<Widget> _crearItems() {
     List<Widget> lista = <Widget>[];
 
